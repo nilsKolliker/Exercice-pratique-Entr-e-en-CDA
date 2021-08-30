@@ -1,0 +1,12 @@
+Drop DATABASE IF EXISTS ExoCDA;
+CREATE DATABASE IF NOT EXISTS ExoCDA DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE ExoCDA;
+
+DROP TABLE IF EXISTS ville;
+CREATE TABLE IF NOT EXISTS ville (
+  id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  nom varchar(50) NOT NULL,
+  numero_de_departement int(11) NOT NULL,
+  code_postal int(11) NOT NULL,
+  date_de_maj date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
