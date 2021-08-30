@@ -2,22 +2,22 @@
 class VilleManager{
 	public static function add(Ville $obj){
 		$db = DbConnect::getDb();
-		$q=$db->prepare('INSERT INTO Ville (nom,numero_de_departement,code_postal,date_de_maj)VALUES(:nom,:numero_de_departement,:code_postal,:date_de_maj)');
+		$q=$db->prepare('INSERT INTO Ville (nom,numerodedepartement,codepostal,datedemaj)VALUES(:nom,:numerodedepartement,:codepostal,:datedemaj)');
 		$q->bindValue(':nom', $obj->getNom());
-		$q->bindValue(':numero_de_departement', $obj->getNumeroDeDepartement());
-		$q->bindValue(':code_postal', $obj->getCodePostal());
-		$q->bindValue(':date_de_maj', $obj->getDateDeMaj());
+		$q->bindValue(':numerodedepartement', $obj->getNumeroDeDepartement());
+		$q->bindValue(':codepostal', $obj->getCodePostal());
+		$q->bindValue(':datedemaj', $obj->getDateDeMaj());
 		$q->execute();
 	}
 
 	public static function update(Ville $obj){
 		$db = DbConnect::getDb();
-		$q=$db->prepare('UPDATE Ville SET nom=:nom,numero_de_departement=:numero_de_departement,code_postal=:code_postal,date_de_maj=:date_de_maj WHERE id=:id');
+		$q=$db->prepare('UPDATE Ville SET nom=:nom,numerodedepartement=:numerodedepartement,codepostal=:codepostal,datedemaj=:datedemaj WHERE id=:id');
 		$q->bindValue(':id', $obj->getId());
 		$q->bindValue(':nom', $obj->getNom());
-		$q->bindValue(':numero_de_departement', $obj->getNumeroDeDepartement());
-		$q->bindValue(':code_postal', $obj->getCodePostal());
-		$q->bindValue(':date_de_maj', $obj->getDateDeMaj());
+		$q->bindValue(':numerodedepartement', $obj->getNumeroDeDepartement());
+		$q->bindValue(':codepostal', $obj->getCodePostal());
+		$q->bindValue(':datedemaj', $obj->getDateDeMaj());
 		$q->execute();
 	}
 
