@@ -4,9 +4,9 @@ class Ville{
 	/*******************************************************************Attributs**************************************************************************** */
 	private $_id;
 	private $_nom;
-	private $_numero_de_departement;
-	private $_code_postal;
-	private $_date_de_maj;
+	private $_numeroDeDepartement;
+	private $_codePostal;
+	private $_dateDeMaj;
 
 	/*******************************************************************Accesseurs*************************************************************************** */
 
@@ -26,28 +26,28 @@ class Ville{
 		$this->_nom=$nom;
 	}
 
-	public function getNumero_de_departement(){
-		return $this->_numero_de_departement;
+	public function getNumeroDeDepartement(){
+		return $this->_numeroDeDepartement;
 	}
 
-	public function setNumero_de_departement($numero_de_departement){
-		$this->_numero_de_departement=$numero_de_departement;
+	public function setNumeroDeDepartement($numeroDeDepartement){
+		$this->_numeroDeDepartement=$numeroDeDepartement;
 	}
 
-	public function getCode_postal(){
-		return $this->_code_postal;
+	public function getCodePostal(){
+		return $this->_codePostal;
 	}
 
-	public function setCode_postal($code_postal){
-		$this->_code_postal=$code_postal;
+	public function setCodePostal($codePostal){
+		$this->_codePostal=$codePostal;
 	}
 
-	public function getDate_de_maj(){
-		return $this->_date_de_maj;
+	public function getDateDeMaj(){
+		return $this->_dateDeMaj;
 	}
 
-	public function setDate_de_maj($date_de_maj){
-		$this->_date_de_maj=$date_de_maj;
+	public function setDateDeMaj($dateDeMaj){
+		$this->_dateDeMaj=$dateDeMaj;
 	}
 
 	/*******************************************************************Constructeur************************************************************************* */
