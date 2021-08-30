@@ -47,7 +47,7 @@ class Ville{
 	}
 
 	public function setDateDeMaj(string $dateDeMaj){
-		$this->_dateDeMaj=new DateTime $dateDeMaj;
+		$this->_dateDeMaj=new DateTime($dateDeMaj);
 	}
 
 	/*******************************************************************Constructeur************************************************************************* */
