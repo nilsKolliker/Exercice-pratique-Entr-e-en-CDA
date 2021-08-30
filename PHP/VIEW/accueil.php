@@ -6,6 +6,9 @@
             </div>
             <?php
                 $listeVille=VilleManager::getList();
+                if(!$listeVille){
+                    echo"pas de données";
+                }
                 foreach ($listeVille as $ville) {
                     echo"".
                     "<div>".
@@ -41,7 +44,7 @@
                         "</div>".
                     "</div>".
                     "<div class='spaceHorizon'></div>".
-                    
+                    "<button><a href='index.php?codePage=update&id=".$ville->getId()."'>Modifier</a></button>".
                     "<div class='spaceHorizon'></div>".
                     "<div class='spaceHorizon'></div>"
                     ; 
