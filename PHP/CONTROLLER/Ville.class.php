@@ -14,7 +14,7 @@ class Ville{
 		return $this->_id;
 	}
 
-	public function setId($id){
+	public function setId(int $id){
 		$this->_id=$id;
 	}
 
@@ -22,7 +22,7 @@ class Ville{
 		return $this->_nom;
 	}
 
-	public function setNom($nom){
+	public function setNom(string $nom){
 		$this->_nom=$nom;
 	}
 
@@ -30,7 +30,7 @@ class Ville{
 		return $this->_numeroDeDepartement;
 	}
 
-	public function setNumeroDeDepartement($numeroDeDepartement){
+	public function setNumeroDeDepartement(int $numeroDeDepartement){
 		$this->_numeroDeDepartement=$numeroDeDepartement;
 	}
 
@@ -38,16 +38,16 @@ class Ville{
 		return $this->_codePostal;
 	}
 
-	public function setCodePostal($codePostal){
+	public function setCodePostal(int $codePostal){
 		$this->_codePostal=$codePostal;
 	}
 
 	public function getDateDeMaj(){
-		return $this->_dateDeMaj;
+		return $this->_dateDeMaj->format("Y-m-d");
 	}
 
-	public function setDateDeMaj($dateDeMaj){
-		$this->_dateDeMaj=$dateDeMaj;
+	public function setDateDeMaj(string $dateDeMaj){
+		$this->_dateDeMaj=new DateTime $dateDeMaj;
 	}
 
 	/*******************************************************************Constructeur************************************************************************* */
