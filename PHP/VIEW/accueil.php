@@ -9,7 +9,7 @@
                 if(!$listeVille){
                     echo"pas de données";
                 }
-                foreach ($listeVille as $ville) {
+                foreach ($listeVille as $ville) {//on boucle gentiment sur les villes
                     echo"".
                     "<div>".
                         "<div>".

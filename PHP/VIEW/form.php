@@ -2,7 +2,7 @@
     <div></div>
     <div>
         <?php
-        if(isset($_GET['id'])){
+        if(isset($_GET['id'])){//si on a un id, on cherche, sinon, non
             $ville=VilleManager::findById($_GET['id']);
             echo'
             <form action="index.php?codePage=action" method="post">
